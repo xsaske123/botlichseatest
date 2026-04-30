@@ -4,11 +4,19 @@ import json
 from discord.ext import tasks, commands
 from datetime import datetime, timedelta
 
+from dotenv import load_dotenv
+from pathlib import Path
+
 import voz
 import tienda #módulo de tienda
 import personajes  # módulo de personajes
 
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
+
 TOKEN = os.getenv('DISCORD_TOKEN')
+if TOKEN is None:
+    print("❌ ERROR: No se encontró el token. Revisa el archivo .env")
 ID_CANAL_VOZ = 1478183764021481654
 ARCHIVO_DATOS = 'datos_lichsea.json'
 
