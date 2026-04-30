@@ -8,9 +8,6 @@ import voz
 import tienda #módulo de tienda
 import personajes  # módulo de personajes
 
-import os
-from dotenv import load_dotenv
-
 TOKEN = os.getenv('DISCORD_TOKEN')
 ID_CANAL_VOZ = 1478183764021481654
 ARCHIVO_DATOS = 'datos_lichsea.json'
